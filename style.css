@@ -206,6 +206,10 @@ header{
 
 .right-column {
     width: 50%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .new-btn {
@@ -229,14 +233,6 @@ header{
     
 }
 
-.my-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-   
- 
-}
 
 .booking {
     background-color: #0791be;
@@ -323,6 +319,7 @@ header{
 /* imagegallery */
 .image-gallery {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     max-width: 1200px;
     align-items: center;
@@ -334,7 +331,7 @@ header{
     position: relative;
     background-color: white;
     box-shadow: 10px 10px 10px rgb(209, 208, 208);
-    width: 300px;
+    width: 250px;
     text-align: center;
     padding: 10px;
 }
@@ -353,7 +350,7 @@ header{
 
 .my-gallery img {
     filter: brightness(50%);
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .my-gallery .country-name {
@@ -378,7 +375,7 @@ header{
     width: 270px;
     padding: 10px 20px;
     margin-top: 55px;
-    margin-left: 550px;
+    margin-left: 450px;
 
 }
 
@@ -430,9 +427,7 @@ header{
 
 .first-image img {
     position: absolute;
-   
     width: 300px;
-
     margin-top: 7px;
     z-index: 2;
     left:120%;
@@ -1278,37 +1273,260 @@ hr {
 }
 
 
-@media screen and (max-width:576px) {
-     html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
- 
-  * {
-    max-width: 100% !important;
- 
-  }
-  .my-web {
-    width:100%;
-  }
-  .sec1 .contact-info {
-    display:none;
-  }
- .social-icons .mysearch {
-   margin-left:320px;
- }
- .nav-content{
+@media screen and (max-width: 575px) {
+
+  /* Hide top contact info */
+  .contact-info {
     display: none;
-   
-  
- }
- .card{
-    display: block;
-    width:100%;
- }
-.row{
+  }
+
+  /* Social icons + search */
+  .social-icons {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .mysearch {
+    display: none;
+  }
+
+  /* Navbar */
+  .nav-content {
+    display: none;
+  }
+  .my-logo {
+    flex-direction: column;
+    text-align: center;
+  }
+  .my-buy-now {
+    margin: 15px auto;
+  }
+  .my-content img {
+    width: 150px;
+  }
+
+  /* Hero / Banner */
+  .my-web {
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    padding-bottom: 200px; /* less padding for mobile */
+  }
+  .row {
+    flex-direction: column;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .card {
+    width: 100%;
+  }
+  .card h6 {
+    font-size: 16px;
+  }
+  .card h2 {
+    display: none;
+  }
+  .card h4 {
+    font-size: 28px;
+  }
+  .big-text {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .new-btn {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-}
+    gap: 10px;
+  }
+  .new-btn .btn1,
+  .new-btn .btn2 {
+    width: 100%;
+  }
+
+  /* Booking form */
+  .right-column {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .booking {
+    width: 100%;
+    padding: 15px;
+  }
+  .first-label,
+  .second-label,
+  .my-date,
+  .my-date1,
+  .booking .btn {
+    width: 100%;
+  }
+
+  /* Section 2 */
+  .second-bar .second-head {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .image-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .my-gallery {
+    width: 90%;
+  }
+  .my-gallery img {
+    width: 100%;
+  }
+
+  /* Grid section */
+  .my-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .first-image img,
+  .second-image img,
+  .third-image img {
+    position: static;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Text + logos */
+  .my-sec {
+    display: block;
+    margin-top: 80px;
+  }
+  .my-text {
+    margin-left: 0;
+    text-align: center;
+  }
+  .my-text h3 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .logo-text {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Brands */
+  .brands img {
+    padding: 10px;
+    width: 80px;
+  }
+
+  /* Packages */
+  .my-package h4 {
+    font-size: 28px;
+  }
+
+  /* Tour section */
+  .tour-details,
+  .tour-details2 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .tour-card {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .tour-image1 img {
+    width: 100%;
+    margin: 0;
+  }
+  .tour-icon {
+    position: static;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .tour-information {
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+
+  /* Explore */
+  .extext h2 {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  /* Offer cards */
+  .offer-information {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Guides */
+  .card-first {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guide h2 {
+    font-size: 32px;
+  }
+  .guide-card {
+    width: 100%;
+  }
+
+  /* Blog */
+  .our-post1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cards02 {
+    width: 100%;
+    height: auto;
+  }
+  .cards02 h5 {
+    font-size: 18px;
+  }
+
+  /* Footer banner */
+  .foot-banner h5 {
+    font-size: 28px;
+    margin: 0 auto;
+  }
+  .foot-banner p {
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+  .button-primary4 {
+    margin: 20px auto 0;
+    display: block;
+  }
+
+  /* Footer */
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin-left: 0;
+  }
+  .box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .footer-image {
+    justify-content: center;
+    margin: 0;
+  }
 }
